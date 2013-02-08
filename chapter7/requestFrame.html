@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width">
+	<title>bounce</title>
+	<link rel="stylesheet" href="stylesheets/bounce.css" type="text/css">
+	
+</head>
+<body>
+<div id="holder">
+	<div id="ball">
+		
+	</div>
+	<div id="floor">
+		
+	</div>
+</div>
+</body>
+<script type="text/javascript" charset="utf-8">
+
+	var requestFrame = (function() {
+		var thisFunc,
+			prefixList = ['webkit', 'moz', 'ms'];
+		
+		//check each method for availability, when one is found,
+		//use that
+		for (var i=0; i < 2; i++) {
+			thisFunc = prefixList[i] + 'RequestAnimationFrame';
+
+			if(window[thisFunc]) {
+				return function(callback) {
+					window[thisFunc](callback);
+				}
+			}
+		}
+		
+		//if we got here none was found, fallback to 15fps setTimeout
+		return function(callback) {
+			window.setTimeout(callback, 16);
+		}
+		
+	})();
+
+	(function(){
+		
+		var destination = 500;
+		var start = 0;
+
+		function move(element){	
+			start = start + 10;
+			element.style.top = (start) + 'px';
+			
+			if (start < destination) {
+				webkitRequestAnimationFrame(function(){
+					move(element);
+				});
+			} else {
+				start = 0;
+				webkitRequestAnimationFrame(function(){
+					move(element);
+				});
+			}
+		}
+		
+		var time;
+		
+		function animate(element, from, to, duration, callback) {
+			
+			//figure out how much to move per millisecond
+			var pixelsPerMS = Math.abs(from-to)/duration;
+			
+			//keep track of the position
+			var pos = from;
+			
+			//keep track of the time
+			var time = Date.now();
+			
+			//create the callback function
+			var func = function(){
+				
+				var lastTime, elapse, pixelsToMove;
+				
+				lastTime = time;
+				time = Date.now();
+				elapsed = time - lastTime;
+				pixelsToMove = Math.ceil(elapsed * pixelsPerMS);
+				
+				pos = pos + pixelsToMove;
+				
+				//In real life this should do more than move elements
+				//down.
+				element.style.top = pos + 'px';
+
+
+				
+				if( pos < to ){
+					requestFrame(func);
+				} else {
+					callback();
+				}
+				
+			}
+			
+			func();
+			
+		}
+	
+		animate(ball, start, 400, 1000, function(){
+			console.log('done!');
+		});
+		
+		// moveOptim();
+
+		// move(ball);
+	})();
+</script>
+</html>

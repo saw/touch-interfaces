@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	
+	<div>
+		<ul>
+			<li>Hi!</li>
+			<li>Hi!</li>
+			<li>Hi!</li>
+			<li>Hi!</li>
+			<li>Hi!</li>
+			<li>Hi!</li>
+			<li>Hi!</li>
+			<li>Hi!</li>
+			<li>Hi!</li>
+			<li>Hi!</li>
+			<li>Hi!</li>
+			<li>Hi!</li>
+			<li>Hi!</li>
+			<li>Hi!</li>
+			<li>Hi!</li>
+			<li>Hi!</li>
+			<li>Hi!</li>
+			<li>Hi!</li>
+			<li>Hi!</li>
+			<li>Hi!</li>
+			<li>Hi!</li>
+			<li>Hi!</li>
+			<li class="foo">Hi!</li>
+			<li>Hi!</li>
+			<li>Hi!</li>
+		</ul>
+	</div>
+	
+</body>
+<script type="text/javascript">
+	
+	var $ = (function() {
+		
+		var  CNodeFacade = function (selector) {
+			this.node = document.querySelector(selector);
+		}
+
+		CNodeFacade.prototype.offsetTop = function() {
+			if(this._offsetTop) {
+				return this._offsetTop;
+			} else {
+				this._offsetTop = this.node.offsetTop;
+				return this._offsetTop;
+			}
+		}
+		CNodeFacade.prototype.setStyle = function(style, value) {
+			this.node.style[style] = value;
+			return this;
+		}
+		
+		return function(selector, useCache) {
+			if(useCache) {
+				return new CNodeFacade(selector);
+			} else {
+				return new NodeFacade(selector);
+			}
+		}
+	}());
+	
+	console.log($('li', true));
+	
+	$('.foo', true).setStyle('border', '1px solid red').setStyle('background', 'green');
+</script>
+
+</html>

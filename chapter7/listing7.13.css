@@ -1,0 +1,42 @@
+#ball {
+	top: 10px;
+	left: 10px;
+}
+
+#ball:active {
+	top: 50px;
+	left: 0px;
+}
+
+/*The same effect can be achieved with transforms:*/
+
+#ball {
+	top: 10px;
+	left: 10px;
+}
+
+#ball:active {
+	top: 10px;
+	left: 10px;
+	/* only webkit requires a prefix, */
+	-webkit-transform: translate(0, 40px);
+	transform: translate(0, 40px);
+} 
+
+@keyframes bounce {
+  0% {
+    transform: translate(0, 20px);
+    animation-timing-function: cubic-bezier(1, 0, 0.96, 0.91);
+  }
+
+  50% {
+    transform: translate(0, 300px);
+    animation-timing-function: cubic-bezier(0, 0.27, 0.32, 1);
+  }
+
+  100% {
+    transform: translate(0, 20px);
+    animation-timing-function: cubic-bezier(0, 0.27, 0.32, 1);
+  }
+}
+

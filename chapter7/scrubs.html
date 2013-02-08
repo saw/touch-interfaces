@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width">
+	<title>Touch</title>
+	<style type="text/css">
+		#zoomer {
+			font-size: 24px;
+			position: absolute;
+			top:50px;
+			left:100px;
+			background: green;
+			-webkit-transition: -webkit-transform .2s ease-in-out;
+			transition: transform .2s ease-in-out;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="zoomer">Drink me!</h1>
+</body>
+<script type="text/javascript" charset="utf-8">
+(function(){
+	
+	var TRANSFORM_PROPERTY = 
+		(typeof document.body.style.webkitTransform ==='string') ?
+		'webkitTransform' : 'transform';
+	
+	var TRANSFORM_END = 
+		(typeof document.body.style.webkitTransform ==='string') ?
+		'webkitTransformEnd' : 'transformend';
+	
+	
+	function embiggen(element) {
+		element.addEventListener(TRANSFORM_END, function(e) {
+			element.style[TRANSFORM_PROPERTY] = 'scale(2)';
+		})
+		element.style[TRANSFORM_PROPERTY] = 'scale3d(2,2,0)';
+	}
+	
+	var z = document.getElementById('zoomer');
+	
+	z.addEventListener('click', function(e) {
+		embiggen(z);
+	})
+	
+})();
+</script>
+</html>

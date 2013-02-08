@@ -1,0 +1,33 @@
+body {
+	margin:0;
+	padding:0;
+	background: #fff;
+	height:1200px;
+	width: 100%;
+}
+
+#holder {
+	margin:0;
+	padding:0;
+	position: absolute;
+	box-sizing: border-box;
+	top:0;
+	left:0;
+	overflow: hidden;
+	background: #fff;
+	border: 5px solid green;
+	bottom:0;
+	right:0;
+}
+	
+#img {
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+	position: absolute;
+	background: url('images/chicken_q.jpg');
+	background-size: 100%;
+	display: block;
+	background-repeat: no-repeat;
+	height: 200px;
+	width: 300px;
+}

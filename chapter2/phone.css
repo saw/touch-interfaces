@@ -1,0 +1,40 @@
+.container {
+	padding: 0;
+}
+
+.main {	
+	margin: 0;
+}
+
+.content {
+	margin: 10px 10px;
+}
+
+.nav-li {
+	font-size: 12px;
+}
+
+.hero-shot {
+	float: none;
+	width: 100%;
+	height: 100px;
+	overflow: hidden;
+	position: relative;
+}
+
+.header .title {
+	font-size: 24px;
+	text-align: left;
+}
+
+.hero-shot .caption {
+	position: absolute;
+	bottom: 5px;
+	margin: 0;
+
+}
+
+.hero-shot .caption, .hero-shot .caption a {
+	color: #000;
+	color: rgba(255,255,255,0.5);
+}

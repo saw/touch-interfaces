@@ -1,0 +1,108 @@
+html {
+	background: #f1eee4;
+	font-family: georgia;
+	color: #7d7f94;
+}
+
+h1 {
+	color: #ba4a00;
+}
+
+.welcome {
+	text-align: center;
+	text-shadow: 1px 1px 1px #fff;
+}
+
+.welcome h1 {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.welcome {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;  
+	margin:5px;
+	padding:10px;
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+	border-radius: 5px;
+}
+
+.carousel {
+	margin:5px;
+}
+
+.carousel ul li {
+	height: 70px;
+	width: 70px;
+	margin: 5px;
+	overflow: hidden;
+	display: block;
+	float: left;
+	border-radius: 5px;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.5), -1px -1px 2px rgba(255,255,255,1);
+}
+
+.slidelink {
+	display: inline-block;
+	height: 75px;
+	width: 75px;
+	border: 2px solid red;
+}
+
+.slidewrap {
+	position: absolute;
+	width: 100%;
+	overflow: hidden;
+	top: 0px;
+	bottom: 0px;
+	left:0px;
+	right:0px;
+	background: #444;
+	display: none;
+}
+
+.slide {
+	width:100%;
+	height:200px;
+	
+	position:absolute;
+	text-align: center;
+	top:40px;
+	left:0px;
+}
+
+.slide div {
+	display: inline-block;
+	height:100px;
+	width:100px;
+	background-size:100%;
+	background-repeat:no-repeat;
+}
+
+.slide .caption {
+	display: block;
+	position: absolute;
+	text-align: left;
+	top: 0px;
+	left: 0px;
+	width:150px;
+	height:25px;
+	background:rgba(0,0,0,0.5);
+}
+
+.slide .caption a {
+	color: #fff;
+	text-decoration: none;
+	font-family: sans-serif;
+}
+
+.controls {
+	font-family: arial;
+	font-size: 28px;
+}
+
+.controls a {
+	color: #fff;
+	text-decoration: none;
+}

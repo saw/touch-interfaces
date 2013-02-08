@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width">
+	<title>bounce</title>
+	<link rel="stylesheet" href="stylesheets/bounce.css" type="text/css">
+	
+</head>
+<body>
+<div id="holder">
+	<div id="ball">
+		
+	</div>
+	<div id="floor">
+		
+	</div>
+</div>
+</body>
+<script type="text/javascript" charset="utf-8">
+	(function(){
+		
+		var down = false,
+		    trans = 'transition';
+		    eventName = 'transitionend';
+		
+		//use prefix if necessary
+		if(typeof document.body.style.webkitTransition === 'string') {
+			trans = 'webkitTransition';
+			eventName = 'webkitTransitionEnd';
+		} else if (typeof document.body.style.MozTransition === 'string') {
+			trans = 'MozTransition';
+		}
+
+		
+		var ball = document.getElementById('ball'),
+		   floor = document.getElementById('floor');
+		
+
+		ball.style.top = (floor.offsetTop - 100) + 'px';
+		
+		function bounce() {
+			if(down) {
+				ball.style[trans] = "top 1s cubic-bezier(0, .27, .32, 1)";
+				// ball.style[trans] = "top 1s ease-out";
+				ball.style.top = '10px';
+				down = false;
+			} else {
+				ball.style[trans] = "top 1s cubic-bezier(1, 0, 0.96, 0.91)";
+				// ball.style[trans] = "top 1s ease-in";
+				ball.style.top = (floor.offsetTop - 100) + 'px';
+				down = true;
+			}
+		}
+		
+		ball.addEventListener(eventName, bounce);
+		bounce();
+		
+	})();
+</script>
+</html>

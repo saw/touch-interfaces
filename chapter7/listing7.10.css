@@ -1,0 +1,86 @@
+/* WebKit */
+@-webkit-keyframes bounce {
+  0% {
+    top: 20px;
+    -webkit-animation-timing-function: cubic-bezier(1, 0, 0.96, 0.91);
+  }
+
+  50% {
+    top: 300px;
+    -webkit-animation-timing-function: cubic-bezier(0, 0.27, 0.32, 1);
+  }
+
+  100% {
+    top: 20px;
+    -webkit-animation-timing-function: cubic-bezier(0, 0.27, 0.32, 1);
+  }
+}
+
+/* Firefox < 16*/
+@-moz-keyframes bounce {
+  0% {
+    top: 20px;
+    -moz-animation-timing-function: cubic-bezier(1, 0, 0.96, 0.91);
+  }
+
+  50% {
+    top: 300px;
+    -moz-animation-timing-function: cubic-bezier(0, 0.27, 0.32, 1);
+  }
+
+  100% {
+    top: 20px;
+    -moz-animation-timing-function: cubic-bezier(0, 0.27, 0.32, 1);
+  }
+}
+
+/* Opera < 12.1*/
+@-o-keyframes bounce {
+  0% {
+    top: 20px;
+    -o-animation-timing-function: cubic-bezier(1, 0, 0.96, 0.91);
+  }
+
+  50% {
+    top: 300px;
+    -o-animation-timing-function: cubic-bezier(0, 0.27, 0.32, 1);
+  }
+
+  100% {
+    top: 20px;
+    -o-animation-timing-function: cubic-bezier(0, 0.27, 0.32, 1);
+  }
+}
+
+/* W3C / IE10 / Firefox / opera */
+@keyframes bounce {
+  0% {
+    top: 20px;
+    animation-timing-function: cubic-bezier(1, 0, 0.96, 0.91);
+  }
+
+  50% {
+    top: 300px;
+    animation-timing-function: cubic-bezier(0, 0.27, 0.32, 1);
+  }
+
+  100% {
+    top: 20px;
+    animation-timing-function: cubic-bezier(0, 0.27, 0.32, 1);
+  }
+}
+
+#floor {
+  top: 400px;
+}
+
+#ball {
+  -webkit-animation: 2s bounce infinite;
+  -moz-animation: 2s bounce infinite;
+  -ms-animation: 2s bounce infinite;
+  -o-animation: 2s bounce infinite;
+  animation-duration: 2s;
+  animation-name: bounce;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}

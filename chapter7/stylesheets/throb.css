@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.button {
+  font-size: 16px;
+  padding: 10px;
+  font-weight: bold;
+  border: 0;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: inset 0px 1px 3px #fff, 0px 1px 2px #000;
+  background: #ff3019;
+  opacity: 1;
+}
+
+.active, .button:active {
+  box-shadow: inset 0px 1px 3px #000, 0px 1px 2px #fff;
+}
+
+.picture {
+  -webkit-transition: opacity 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out;
+  -o-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+  opacity: 1;
+}
+.picture.hidden {
+  opacity: 0;
+}
+
+@-webkit-keyframes throb {
+  0% {
+    background: #ff3019;
+    -webkit-animation-timing-function: ease-in-out;
+  }
+
+  50% {
+    background: #921f12;
+  }
+
+  100% {
+    background: #ff3019;
+  }
+}
+
+@-moz-keyframes throb {
+  0% {
+    background: #ff3019;
+    -moz-animation-timing-function: ease-in-out;
+  }
+
+  50% {
+    background: #921f12;
+  }
+
+  100% {
+    background: #ff3019;
+  }
+}
+
+@-o-keyframes throb {
+  0% {
+    background: #ff3019;
+    -o-animation-timing-function: ease-in-out;
+  }
+
+  50% {
+    background: #921f12;
+  }
+
+  100% {
+    background: #ff3019;
+  }
+}
+
+@keyframes throb {
+  0% {
+    background: #ff3019;
+    animation-timing-function: ease-in-out;
+  }
+
+  50% {
+    background: #921f12;
+  }
+
+  100% {
+    background: #ff3019;
+  }
+}
+
+.button {
+  -webkit-animation-duration: 2s;
+  -webkit-animation-name: throb;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-duration: 2s;
+  -moz-animation-name: throb;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-duration: 2s;
+  -ms-animation-name: throb;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+  -o-animation-duration: 2s;
+  -o-animation-name: throb;
+  -o-animation-iteration-count: infinite;
+  -o-animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-name: throb;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}

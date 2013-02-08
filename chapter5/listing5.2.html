@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>The History API</title>
+</head>
+<body>
+	<h1 id="number">1</h1>
+	<a id="forward" href="?num=2">Go forward!</a>
+</body>
+<script type="text/javascript" charset="utf-8">
+
+	var useHash = false;
+	var hashExp = /#([0-9]+)/;
+	
+	if(!history.pushState) {
+		useHash = true;
+	}
+	
+	var link = document.getElementById('forward');
+	var num = document.getElementById('number');
+	
+	//consolidate the update into one place
+	function handleStateChange(count) {
+		num.innerHTML = count;
+		document.title = 'Number ' + count;
+		link.href = '?num=' + (parseInt(count,10) + 1);
+	}
+
+	function setNumFromUrl() {
+		if(location.search) {
+			
+			var match = location.search.match(/num=([0-9]+)/);
+			if(match) {
+				
+				//if pushState doesn't work, we need to 
+				//scrub the query string and redirect to the hash version
+				if(useHash) {
+					location = 'history.html#' + match[1];
+					
+				} else {
+					handleStateChange(match[1]);
+				}
+			}
+			
+		}else if (location.hash) {
+			
+			var match = location.hash.match(hashExp);
+			
+			
+			handleStateChange(match[1]);
+			
+			//if the user can use push state, but came with a hash url, 
+			//we can upgrade the url with replaceState.
+			if(!useHash) {
+				history.replaceState({count:match[1]}, null, 
+							'history.html?num=' + match[1]);
+			}
+			
+		} else {
+			handleStateChange(1);
+		}
+	}
+	
+	link.addEventListener('click', function(e) {
+		var myNum;
+		
+		e.preventDefault();
+		myNum = parseInt(num.innerHTML, 10);
+		myNum++;
+		
+		if(useHash) {
+			
+			location.hash = myNum;
+			
+		} else {
+			
+			history.pushState({count:myNum}, null, '?num=' + myNum);
+			
+		}
+		
+		handleStateChange(myNum);
+		
+	});
+	
+	
+	if(!useHash) {
+		
+		//this is the lightweight bversion
+		addEventListener('popstate', function(e) {
+			if( e.state && e.state.count ) {
+				handleStateChange(e.state.count);
+			} else {			
+				setNumFromUrl();			
+			}		
+		});
+		
+	} else {
+		
+		//because the first popstate isn't called,
+		//we need to call this manually
+		setNumFromUrl();
+		
+		//we need to know the old value
+		//to be able to see if ti changed
+		var oldHash = location.hash;
+		
+		//poll every 100ms
+		window.setInterval(function(){
+
+			var match;
+			
+			if( window.hash !== oldHash ){
+				match = location.hash.match(hashExp);
+				oldHash = location.hash;
+				if(match) {
+					handleStateChange(match[1]);
+				}
+				
+			}
+			
+		}, 100);
+	}
+
+
+</script>
+</html>

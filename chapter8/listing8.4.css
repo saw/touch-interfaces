@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.slide {
+  width: 300px;
+  padding: 20px;
+  margin: 10px auto 10px auto;
+  height: 250px;
+  background: #f6f6ed;
+  position: relative;
+  text-align: center;
+}
+
+.slide p {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-family: sans-serif;
+}
+
+.slide .img {
+  max-width: 100%;
+  max-height: 210px;
+  text-align: center;
+  opacity: 1;
+  display: inline;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  -o-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.imgholder {
+  width: 100%;
+  text-align: center;
+}

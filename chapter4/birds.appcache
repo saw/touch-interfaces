@@ -1,0 +1,16 @@
+CACHE MANIFEST
+# The date below is a simple
+# way to make sure I change this 
+#file
+# 2013-03-15r4
+
+birds_responsive.html
+jquery-1.8.0.min.js
+gull-360x112.jpg
+gull-640x360.jpg
+gull-720x225.jpg
+
+FALLBACK:
+
+NETWORK:
+*

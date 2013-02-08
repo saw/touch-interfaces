@@ -1,0 +1,31 @@
+.card {
+	width: 300px;
+	margin: 30px auto 0 auto;
+	background: #ddd;
+	border-radius: 10px;
+	border-bottom: 1px solid #333;
+	border-top: 1px solid #fff;
+	box-shadow: 3px 3px 5px #555;
+}
+
+.card img {
+	width: 100%;
+}
+
+.card h2 {
+	margin-bottom: 0px;
+	text-shadow: 0px 1px #fff;
+}
+
+.right {
+	color: green;
+}
+
+.info {
+	padding: 15px;
+}
+
+.cta {
+	padding-top: 10px;
+	text-align: center;
+}

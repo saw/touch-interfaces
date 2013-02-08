@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width">
+	<title>California Condor</title>
+	<style type="text/css" media="screen">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}html{background:#fff;color:#000}a{color:green;text-decoration:none}p{margin-bottom:10px}h2{font-size:20px;margin:4px}.container{padding:0 50px}.bd{font-family:Helvetica,â€œHelvetica Neueâ€,Arial,sans-serif}.hero-shot{width:50%;float:left;margin-right:10px}.hero-img{max-width:640px;width:100%;height:0;padding-bottom:56%;background-size:100%;display:block}.nav-li{display:inline-block;background:#5e49ff;border:3px solid #8a7bfd;width:120px;margin-bottom:10px}.nav-li .nav-link{color:#fff;padding:4px}.header{width:100%;height:60px;background:#000;padding:0;font-size:38px;font-weight:bold}.header h1{color:#fff;padding:10px;text-align:left}.sidebar{position:absolute;padding:10px;top:60px;width:150px}.main{margin:10px 10px 10px 150px}.footer{width:100%}@media only screen and (max-width:800px){.container{padding:0 10px}.nav-li{width:auto}.sidebar{position:relative;top:0;width:auto;padding:0;text-align:center}.header h1{text-align:center}.main{margin:0}}@media only screen and (max-width:480px){.container{padding:0}.main{margin:0}.content{margin:10px 10px}.nav-li{font-size:12px}.hero-img{position:absolute;width:100%;height:400px;top:-100px}.hero-shot{float:none;width:100%;height:100px;overflow:hidden;position:relative}.hero-shot .caption{position:absolute;bottom:5px;margin:0}.header .title{font-size:24px;text-align:left}.hero-shot .caption,.hero-shot .caption a{color:#000;color:rgba(255,255,255,0.5)}}
+	</style>
+</head>
+<body class="bd">
+	<header class="container header">
+		<h1 class="title">Birds of California!</h1>
+	</header>
+	
+	<aside class="sidebar">
+		<nav class="bird-nav">
+			<ul class="bird-list">
+				<li class="nav-li"><a data-latin="Gymnogyps californianus" class="nav-link" href="california_condor.html">California Condor</a></li>
+				<li class="nav-li"><a data-latin="Callipepla californica" class="nav-link" href="california_quail.html">California Quail</a></li>
+				<li class="nav-li"><a data-latin="Larus californicus" class="nav-link" href="california_gull.html">California Gull</a></li>
+			</ul>
+		</nav>
+	</aside>
+	
+	<div class="container main">
+		<h2 id="birdname"></h2>
+		<div class="hero-shot">
+			<a id="imglink" href="#"><span role="img" aria-label="A bird" class="hero-img"></span></a>
+			<p class="caption">Photo By <a id="attribution" href="#">...</a></p>
+		</div>
+		<section class="content">
+			
+		</section>
+
+	</div>
+	
+	<footer class="container ft">
+		<ul class="foot-links">
+			<li><a href="/copyright">&copy; 2012 Awesome Bird Foundation, All Rights Reserved</a></li>
+			<li><a href="/tos">Terms of Service</a></li>
+		</ul>
+	</header>
+</body>
+<script type="text/javascript" charset="utf-8">
+(function(){var c=0;window.Flickr=function(a){return{makeRequest:function(b,g,e){var d,f,h;d=g||{};d.method=b;d.api_key=a;d.format="json";b="flcb"+c++;d.jsoncallback=b;f=document.createElement("script");window[b]=function(a){e(a);document.body.removeChild(f)};d=[];for(h in g)d.push(h+"="+g[h]);g="http://api.flickr.com/services/rest/?"+d.join("&");f.src=g;document.body.appendChild(f)}}}})();
+(function(){function c(e){var d,e=g+e;if(a[e])return a[e].date-Date.now()>b?(localStorage.removeItem(e),delete a[e],!1):a[e].data;if(d=localStorage.getItem(e)){d=JSON.parse(d);if(Date.now()-parseInt(d.date,10)>b)return localStorage.removeItem(e),delete a[e],!1;a[e]=d;return d.data}}window.birdData={};var a={},b=864E5,g="ti";window.birdData.fetchPhotos=function(b,d){var f;(f=c(b))?d(f.photos.photo):(f=new Flickr("b04fabc8322a5f5f45f5b172c9c176fd"),f.makeRequest("flickr.photos.search",{text:b,extras:"url_z,owner_name",
+license:5,per_page:50},function(c){d(c.photos.photo);c={date:Date.now(),data:c};localStorage.setItem(g+b,JSON.stringify(c));a[b]=c}))}})();
+(function(){function c(a){var b;b=document.querySelector(".hero-img");a=a[Math.floor(Math.random()*a.length)];b.innerHTML="";b.style.backgroundImage="url("+a.url_z+")";document.getElementById("imglink").href="http://www.flickr.com/photos/"+a.owner+"/"+a.id;b=document.getElementById("attribution");b.href="http://www.flickr.com/photos/"+a.owner;b.innerHTML=a.ownername}new Flickr("b04fabc8322a5f5f45f5b172c9c176fd");window.birdData.updatePhoto=c;window.birdData.changePhoto=function(a){var b,g=document.querySelector(".hero-img");
+g.style.background="#ccc";g.innerHTML="<p>Loading...</p>";birdData.fetchPhotos(a,function(a){b=a;c(b)})}})();(function(){window.ajax={makeRequest:function(c,a,b){var g=new XMLHttpRequest;g.open("get",c,!0);g.onreadystatechange=function(){4==this.readyState&&a.apply(b,[this])};g.send()}}})();
+(function(){function c(b,c){for(var e=a.length,d,f=0;f<e;f++)b.match(a[f].route)&&(d=a[f].scope?a[f].scope:window,c||history.pushState({},null,b),a[f].callback.apply(d,[b]))}var a=[];window.addEventListener("popstate",function(){c(window.location.href,!0)});window.router={handleRoute:c,addRoute:function(b,c,e){a.push({route:b,callback:c,scope:e})}}})();
+for(var latinNameMap={},links=document.querySelectorAll(".nav-link"),href,pageCache={},i=0,len=links.length;i<len;i++)href=links[i].href.match(/([a-z_]+\.html)/)[1],latinNameMap[href]=links[i].getAttribute("data-latin");
+function handlePage(c){var a=c.match(/([a-z_]+\.html)/)[1];birdData.changePhoto(latinNameMap[a]);pageCache[a]?(document.querySelector(".content").innerHTML=pageCache[a],console.timeEnd("click")):ajax.makeRequest(a.replace(".html","_frag.html"),function(b){document.querySelector(".content").innerHTML=b.responseText;pageCache[a]=b.responseText;console.timeEnd("click")},this)}router.addRoute(/[a-z_]+\.html/,handlePage);
+document.addEventListener("click",function(c){"nav-link"==c.target.className&&(console.time("click"),c.preventDefault(),router.handleRoute(c.target.href))},!0);	
+</script>
+</html>

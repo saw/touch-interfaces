@@ -1,0 +1,5 @@
+#ball {
+	animation-name: bounce;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}

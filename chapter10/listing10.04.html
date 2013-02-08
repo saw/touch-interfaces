@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<style type="text/css">
+	#scrolly {
+		position: relative;
+		height: 250px;
+		margin: auto;
+		width: 90%;
+		border: 1px solid red;
+	}
+	</style>
+	<script src="/iscroll.js"></script>
+</head>
+<body>
+	<div id="scrolly">
+		<div id="scroller">
+			<p>content</p>	
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+var myScroll = new iScroll('scrolly',{ hScrollbar: false, vScrollbar: true });
+</script>
+</html>

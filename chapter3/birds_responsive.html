@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width">
+	<title>Birds of California</title>
+	<style>
+	/* http://meyerweb.com/eric/tools/css/reset/
+	v2.0 | 20110126
+	License:none (public domain)
+	*/
+	html,body,div,span,applet,object,iframe,
+	h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+	a,abbr,acronym,address,big,cite,code,
+	del,dfn,em,img,ins,kbd,q,s,samp,
+	small,strike,strong,sub,sup,tt,var,
+	b,u,i,center,
+	dl,dt,dd,ol,ul,li,
+	fieldset,form,label,legend,
+	table,caption,tbody,tfoot,thead,tr,th,td,
+	article,aside,canvas,details,embed,
+	figure,figcaption,footer,header,hgroup,
+	menu,nav,output,ruby,section,summary,
+	time,mark,audio,video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+	/* HTML5 display-role reset for older browsers */
+	article,aside,details,figcaption,figure,
+	footer,header,hgroup,menu,nav,section {
+		display: block;
+	}
+	body {
+		line-height: 1;
+	}
+	ol,ul {
+		list-style: none;
+	}
+	blockquote,q {
+		quotes: none;
+	}
+	blockquote:before,blockquote:after,
+	q:before,q:after {
+		content: '';
+		content: none;
+	}
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+	html {
+		background: #fff;
+		color: #000;
+	}
+	a {
+		color: green;
+		text-decoration: none;
+	}
+	p {
+		margin-bottom: 10px;
+	}
+	h2 {
+		font-size: 20px;
+		margin: 4px;
+	}
+	.container {
+		padding: 0 50px;
+	}
+	.bd {
+		font-family: Helvetica,“Helvetica Neue”,Arial,sans-serif ;
+	}
+	
+	.hero-shot {
+		width: 50%;
+		float: left;
+		margin-right: 10px;
+	}
+	
+	.hero-img {
+		max-width: 640px;
+		width: 100%;
+		height: 0;
+		padding-bottom: 56%;
+		background-size: 100%;
+	}
+	
+	@media only screen and (min-width: 800px) {
+		
+		.hero-img {
+			background: url(gull-640x360.jpg);
+		}
+		
+	}
+	
+	@media only screen (max-width: 1020px) {
+		
+		.hero-img {
+			border: 1px solid red;
+			background: url(gull-640x360.jpg);
+		}
+		
+	}
+	
+	@media only screen and (min-width: 1020px) {
+		
+		.hero-img {
+			background: url(gull-640x360.jpg);
+		}
+		
+	}
+	
+	
+	.nav-li {
+		display: inline-block;
+		background: #5e49ff;
+		border: 3px solid #8a7bfd;
+		width: 120px;
+		margin-bottom: 10px;
+	}
+	.nav-li .nav-link {
+		color: #fff;
+		padding: 4px;
+	}
+	.header {
+		width: 100%;
+		height: 60px;
+		background: #000;
+		padding: 0;
+		font-size: 38px;
+		font-weight: bold;
+	}
+	.header h1 {
+		color: #fff;
+		padding: 10px;
+		text-align: left;
+	}
+
+	.sidebar {
+		position: absolute;
+		padding: 10px;
+		top: 60px;
+		width: 150px;
+	}
+	.main {
+		margin: 10px 10px 10px 150px;
+	}
+	.footer {
+		width: 100%;
+	}
+	
+	
+@media only screen and (max-width:800px) {
+	
+	.container {
+		padding: 0 10px;
+	}
+	.nav-li {
+		width: auto;
+	}
+	.sidebar {
+		position:relative; /* back in the flow */
+		top: 0;
+		width: auto;
+		padding: 0;
+		text-align: center;
+	}
+
+	
+	.hero-img {
+		background: url(gull-360x112.jpg);
+	}
+	
+	.header h1 {
+		text-align: center;
+	}
+	.main {
+		margin: 0;
+	}
+
+}
+@media only screen and (max-width:480px) {
+	.container {
+		padding: 0;
+	}
+	.main {
+		margin: 0;
+	}
+	.content {
+		margin: 10px 10px;
+	}
+	.nav-li {
+		font-size: 12px;
+	}
+	.hero-shot {
+		float: none;
+		width: 100%;
+		height: 100px;
+		overflow: hidden;
+		position: relative;
+	}
+	.hero-shot .caption {
+		position: absolute;
+		bottom: 5px;
+		margin: 0;
+	}
+	
+	.header .title {
+		font-size: 24px;
+		text-align: left;
+	}
+	
+	.hero-img {
+		background: url(gull-360x112.jpg);
+/*		background: image-set(url(bird_cropped.jpg) 1x, url(bird_cropped_retina.jpg) 2x);*/
+	}
+	
+	.hero-shot .caption,.hero-shot .caption a {
+		color: #000;
+		color: rgba(255,255,255,0.5);
+	}
+
+}
+
+@media only screen and (max-width:480px) and (-webkit-min-device-pixel-ratio: 2) {
+	
+		.hero-img {
+			background: url(bird_cropped_retina.jpg);
+		}
+	
+	
+}
+
+	</style>
+</head>
+<body class="bd">
+	<header class="container header">
+		<h1 class="title">Birds of California!</h1>
+	</header>
+	
+	<aside class="sidebar">
+		<nav class="bird-nav">
+			<ul class="bird-list">
+				<li class="nav-li"><a class="nav-link" href="/california-condor">California Condor</a></li>
+				<li class="nav-li"><a class="nav-link" href="/california-quail">California Quail</a></li>
+				<li class="nav-li"><a class="nav-link" href="/california-gull">California Gull</a></li>
+			</ul>
+		</nav>
+	</aside>
+	
+	<div class="container main">
+		<h2>California Gull</h2>
+		<div class="hero-shot">
+			<a href="http://www.flickr.com/photos/catlantis/5514922015/"><div role="img" aria-label="California gull flying" class="hero-img"></div>
+			<p class="caption">Photo By <a href="http://www.flickr.com/photos/catlantis/5514922015/">C.L. Maclay</a></p>
+		</div>
+		<section class="content">
+			<p>The California Gull (<i>Larus californicus</i>) is a gull native to the western United States. The gull looks a bit like the Herring Gull. distinguishing characteristics include a black ring on a yellow bill, yellow legs and a rounder head.</p>
+			<p>Adults have gray and white bodies with black primary feathers. Juveniles have brown plumage.</p>
+			<p>The California Gull is very common in the San Francisco Bay area. The bay isn't their historic habitat--that is the salty Mono Lake on the Nevada border. Their abundance in the bay area is attributed to their breeding in the salt pond of the south bay, and abundant food from bay area landfills</p>
+		</section>
+
+	</div>
+	
+	<footer class="container ft">
+		<ul class="foot-links">
+			<li><a href="/copyright">&copy; 2012 Awesome Bird Foundation, All Rights Reserved</a></li>
+			<li><a href="/tos">Terms of Service</a></li>
+		</ul>
+	</header>
+</body>
+<script src="jquery-1.8.0.min.js" type="text/javascript" charset="utf-8"></script>	
+</html>

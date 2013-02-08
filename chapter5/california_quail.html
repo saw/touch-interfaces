@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width">
+	<title>California Condor</title>
+	<link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body class="bd">
+	<header class="container header">
+		<h1 class="title">Birds of California!</h1>
+	</header>
+	
+	<aside class="sidebar">
+		<nav class="bird-nav">
+			<ul class="bird-list">
+				<li class="nav-li"><a data-latin="Gymnogyps californianus" class="nav-link" href="california_condor.html">California Condor</a></li>
+				<li class="nav-li"><a data-latin="Callipepla californica" class="nav-link" href="california_quail.html">California Quail</a></li>
+				<li class="nav-li"><a data-latin="Larus californicus" class="nav-link" href="california_gull.html">California Gull</a></li>
+			</ul>
+		</nav>
+	</aside>
+	
+	<div class="container main">
+		<h2 id="birdname"></h2>
+		<div class="hero-shot">
+			<a id="imglink" href="#"><span role="img" aria-label="A bird" class="hero-img"></span></a>
+			<p class="caption">Photo By <a id="attribution" href="#">...</a></p>
+		</div>
+		<section class="content">
+			
+		</section>
+
+	</div>
+	
+	<footer class="container ft">
+		<ul class="foot-links">
+			<li><a href="/copyright">&copy; 2012 Awesome Bird Foundation, All Rights Reserved</a></li>
+			<li><a href="/tos">Terms of Service</a></li>
+		</ul>
+	</header>
+</body>
+<script src="flickr_api.js" type="text/javascript" charset="utf-8"></script>
+<script src="bird_data.js" type="text/javascript" charset="utf-8"></script>
+<script src="imagefetcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="ajax.js" type="text/javascript" charset="utf-8"></script>
+<script src="router.js" type="text/javascript" charset="utf-8"></script>
+<script src="pjax.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

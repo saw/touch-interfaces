@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width">
+	<title>Simple Switch</title>
+	<link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body class="bd">
+	<script type="text/javascript">document.body.className = "js";</script>
+	<h1>A Simple Switch</h1>
+	<h2>Power: <span id="status">OFF</span></h2>
+	<form action="/">
+		<label for="power">Power:</label>
+		<div class="switchwrap">
+			<div class="switch">
+			</div>
+			<input type="checkbox" id="power" />
+		</div>
+	</form>
+</body>
+<script type="text/javascript">
+	(function() {
+		
+		var TRANSITION_END = 'webkitTransitionEnd',
+			TRANSITION_CSS = '-webkit-transition',
+			TRANSFORM_CSS = '-webkit-transform',
+			TRANSFORM = 'webkitTransform',
+			TRANSITION = 'webkitTransition';
+		
+		//unprefixed
+		if(document.body.style.transform) {
+			TRANSITION_END = 'transitionend';
+			TRANSITION_CSS = 'transition';
+			TRANSFORM_CSS = 'transform';
+			TRANSFORM = 'transform';
+			TRANSITION = 'transition';
+		}
+		
+		var $ = function(selector) {
+			return document.querySelector(selector);
+		}
+		
+		var isOn = false;
+		
+		function turnOn() {
+			$('#status').innerHTML = 'ON';
+			isOn = true;
+		}
+		
+		function turnOff() {
+			$('#status').innerHTML = 'OFF';
+			isOn = false;
+		}
+		
+		
+		var theSwitch = $('.switch');
+		
+		var l = $('form').offsetLeft;
+
+		var startLeft;
+		
+		function handleTouch(e) {
+
+			var goTo, endPoint;
+			
+			switch(e.type) {
+				
+				case 'touchstart':
+					startLeft = e.touches[0].pageX;
+					break;
+				case 'touchmove':
+					goTo = (e.touches[0].pageX - l);
+					
+					if(goTo < 119 && goTo > 0) {
+						lastX = e.touches[0].pageX - l;
+						theSwitch.style.webkitTransform = 'translate3d(' + 
+						(e.touches[0].pageX - l) + 'px' + ',0,0)';
+					}
+					
+					if(goTo > 60 && !isOn) {
+						console.log('turn on');
+						turnOn();
+					} else if (goTo < 60 && isOn) {
+						console.log('turn off');
+						turnOff();
+					}
+					
+					break;
+				case 'touchcancel':
+				//fall through to touchend, logic is the same
+				case 'touchend':
+					if(lastX > 60) {
+						endPoint = 119;
+					} else {
+						endPoint = 0;
+					}
+					
+					theSwitch.style[TRANSITION] = TRANSFORM_CSS + ' .1s ease-out';
+					theSwitch.style[TRANSFORM] = 'translate3d('+endPoint+'px,0,0)';
+					break;
+			}
+		}
+		
+		theSwitch.addEventListener('touchstart', handleTouch);
+		theSwitch.addEventListener('touchend', handleTouch);
+		theSwitch.addEventListener('touchmove', handleTouch);
+		theSwitch.addEventListener(TRANSITION_END, function(e) {
+			theSwitch.style[TRANSITION] = '';
+		});
+	}());
+</script>
+</html>

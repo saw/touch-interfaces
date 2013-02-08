@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<style type="text/css">
+	
+	body {
+		-ms-touch-action: none;
+	}
+	
+	#scrolly {
+		position: absolute;
+		width: 200px;
+		height: 200px;
+		background: red;
+		top:0;
+		left:0;
+	}
+	#log {
+		position: absolute;
+		top: 400px;
+		height:200px;
+		width: 100%;
+		overflow: auto;
+		border: 1px dotted black;
+	}
+	</style>
+</head>
+<body>
+	<div class="overthrow" id="scrolly">
+	</div>
+	<pre id="log"></div>
+</body>
+<script type="text/javascript">
+
+	var logEl = document.getElementById('log');
+	var scrolly = document.getElementById('scrolly');
+	function log(text){
+		logEl.innerHTML = JSON.stringify(text) + '\n';
+	}
+	
+	function handleTouch(e) {
+		try{
+		log(e.type);
+		scrolly.style.left = e.screenX + 'px';
+	}catch(e){
+		log(e.message);
+	}
+	}
+	
+	document.addEventListener('MSPointerDown', handleTouch);
+	document.addEventListener('MSPointerMove', handleTouch);
+	document.addEventListener('MSPointerUp', handleTouch);
+</script>
+</html>

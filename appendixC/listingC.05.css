@@ -1,0 +1,177 @@
+/* reset css would be here */
+
+html {
+	background-color: #929292;
+	font-family: Helmet, Freesans, sans-serif;
+	color: #393939;
+}
+
+.hd {
+	height: 25px;
+	background: #d4d2d3; /* Old browsers */
+	background: -moz-linear-gradient(top, #d4d2d3 0%, #bcb9b9 100%); 
+	background: -webkit-linear-gradient(top, #d4d2d3 0%,#bcb9b9 100%);
+	background: -o-linear-gradient(top, #d4d2d3 0%,#bcb9b9 100%); 
+	background: -ms-linear-gradient(top, #d4d2d3 0%,#bcb9b9 100%); 
+	background: linear-gradient(to bottom, #d4d2d3 0%,#bcb9b9 100%);
+	box-shadow: 0px 0px 5px #000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.spinner {
+	width: 16px;
+	height: 16px;
+	background: url( [spinner data uri]);
+ }
+
+.loading {
+	margin: 50px auto;
+	width: 16px;
+}
+
+.main {
+
+	height: 1200px;
+}
+
+.logo {
+	padding: 3px;
+}
+
+.logotype {
+	text-transform: uppercase;
+	line-height: .9em;
+	text-shadow: 0px 1px #dfdddd;
+	font-weight: bold;
+	font-size: 11px;
+}
+
+.logotype.l2 {
+	color: #cb2027;
+}
+
+.logotype a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.score {
+	position: absolute;
+	text-align: right;
+	top: 6px;
+	right: 5px;
+	width: auto;
+	font-size: 13px;
+	font-weight: bold;
+	text-shadow: 0px 1px #dfdddd;
+}
+
+.score .count {
+	color: #cb2027;
+}
+
+.card {
+	width: 300px;
+	margin: 30px auto 0 auto;
+	background: #ddd;
+	border-radius: 10px;
+	border-bottom: 1px solid #333;
+
+	border-top: 1px solid #fff;
+	box-shadow: 3px 3px 5px #555;
+}
+
+.card img {
+	width: 100%;
+}
+
+.card h2 {
+	margin-bottom: 0px;
+	text-shadow: 0px 1px #fff;
+}
+
+.right {
+	color: green;
+}
+
+.info {
+	padding: 15px;
+}
+
+.cta {
+	padding-top: 10px;
+	text-align: center;
+}
+
+.answers {
+	list-style: none;
+	text-align: left;
+	padding: 5px;
+}
+
+.answer {
+	position: relative;
+}
+
+
+.answer input{
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 1;
+}
+
+.answered .answer input {
+	display: none;
+}
+
+.answers .right {
+	color: green;
+	font-weight: bold;
+}
+
+.answers .wrong {
+	text-decoration: line-through;
+}
+
+.answer {
+	padding-left: 20px;
+	margin-bottom: 10px;
+}
+
+.answered .answer {
+	padding-left: 0;
+}
+
+.la {
+	font-size: 10px;
+	font-style: italic;
+}
+
+
+.button {
+	font-size: 16px;
+	padding: 10px;
+	font-weight: bold;
+	font-size: 16px;
+	border: 0;
+	text-shadow: 0 -1px 0px #000;
+	color: #fff;
+	border-radius: 10px;
+	box-shadow: inset 0px 1px 3px #000, 0px 1px 2px #fff;
+	
+	background: #ff3019;
+	background: -moz-linear-gradient(top, #ff3019 0%, #cf0404 100%);
+	background: -webkit-linear-gradient(top, #ff3019 0%,#cf0404 100%);
+	background: -o-linear-gradient(top, #ff3019 0%,#cf0404 100%);
+	background: -ms-linear-gradient(top, #ff3019 0%,#cf0404 100%);
+	background: linear-gradient(to bottom, #ff3019 0%,#cf0404 100%);
+	opacity: 1;
+}
+
+.button.hidden {
+	opacity: 0;
+}

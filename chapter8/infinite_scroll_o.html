@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width">
+	<title>Scrooooooll</title>
+	<link rel="stylesheet" href="stylesheets/screen.css" >
+	<style type="text/css">
+		.slide .img {
+			opacity: 0;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrapper">
+		
+	</div>
+</body>
+<script id="slide" type="text/x-handlebars">
+	<div id="s-{{id}}" data-id="{{id}}" class="slide">
+		<div class="imgholder">
+			<a title="by {{ownername}} on Flickr" target="_blank" 
+			href="http://www.flickr.com/photos/{{owner}}/{{id}}">
+			<img class="img" data-src="{{url_n}}" src="data:image/gif;base64,R0lGODdhAQABAPAAAP%2F%2F%2FwAAACwAAAAAAQABAEACAkQBADs%3D" ></a>
+			<p>{{title}}</p>
+		</div>
+	</div>
+</script>
+<script id="slides" type="text/x-handlebars">
+	{{#photos}}
+	<div id="s-{{id}}" data-id="{{id}}" class="slide">
+		<p class="logo">AWESOMECHROME</p>
+		<div class="imgholder">
+			<a title="by {{ownername}} on Flickr" target="_blank" 
+			href="http://www.flickr.com/photos/{{owner}}/{{id}}">
+			<img class="img" data-src="{{url_n}}" src="http://l.yimg.com/g/images/spaceball.gif" ></a>
+		</div>
+	</div>
+	{{/photos}}
+</script>
+<script type="text/javascript" src="handlebars.js"></script>
+<script type="text/javascript" src="bird_data.js"></script>
+<script type="text/javascript" src="scroller_o.js"></script>
+<script type="text/javascript">
+
+</script>
+
+</html>

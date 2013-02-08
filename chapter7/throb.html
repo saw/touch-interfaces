@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width">
+	<title>Touch</title>
+	<link rel="stylesheet" href="styles/throb.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+	<div id="touchme">
+		<button class="button" id="toggle">Toggle Picture</button>
+		<div  class="picture hidden">
+			<p>Goldfinch by ibm4381 on Flickr</p>
+			<a href="http://www.flickr.com/photos/j_benson/3504443844/">
+				<img src="http://farm4.staticflickr.com/3597/3504443844_441d538891_z.jpg" width="320" height="256" alt="Goldfinch">
+			</a>
+		</div>
+	</div>
+</body>
+<script src="facade.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+
+(function(){
+	
+	var h = document.querySelector(".picture");
+	
+	function fadeIn() {
+		var h = document.querySelector(".picture");
+		var opacity = parseFloat(h.style.opacity);
+		if(opacity < 1) {
+			opacity = opacity + 0.05;
+			h.style.opacity = opacity;
+			window.setTimeout(fadeIn, 33);
+		}
+	}
+	
+	function fadeOut() {
+		var opacity = parseFloat(h.style.opacity);
+		if(opacity > 0.2) {
+			opacity = opacity - 0.1;
+			h.style.opacity = opacity;
+			window.setTimeout(fadeOut, 10);
+		} else {
+			h.style.opacity = 0;
+		}
+		
+	}
+	
+	var hidden = true;
+	function togglePicture(){
+		var h = document.querySelector(".picture");
+		if(hidden) {
+			h.className = "picture";
+			// fadeIn();
+			hidden = false;
+		} else {
+			h.className = "picture hidden";
+			// fadeOut();
+			hidden = true;
+		}
+	}
+
+	$('.button').on('tap', function(e) {
+		e.preventDefault();
+		togglePicture();
+		e.target.className = "active button";
+	}).on('tapend', function(e) {
+		e.target.className = "button";
+	});
+	
+})();
+
+</script>
+</html>

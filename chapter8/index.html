@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<title>Perf tester.</title>
+</head>
+<body>
+	<pre id="data"></pre>
+	<a href="#" id="run">Run test</a>
+</body>
+<script type="text/javascript">
+	var out;
+	
+	var arr = ["I","never","for","a","day","gave","up","listening","to","the","songs","of","our","birds,","or","watching","their","peculiar","habits,","or","delineating","them","in","the","best","way","I","could."];
+	
+	var outData = '';
+	
+	function log(str) {
+		outData += str + "\n";
+		document.getElementById('data').innerHTML = outData;
+	}
+	
+	function runTest(func, name){
+		var start = Date.now()
+		for (var i=0; i < 1000000; i++) {
+			func();
+		}
+		var end = Date.now() - start;
+		log(name +': ' + end +'ms\n');
+
+	}
+	
+	function control() {
+		out = "I never for a day gave up listening to the songs of our birds, or watching their peculiar habits, or delineating them in the best way I could.";
+	}
+	
+	function arrJoin() {
+		out = ["I","never","for","a","day","gave","up","listening","to","the","songs","of","our","birds,","or","watching","their","peculiar","habits,","or","delineating","them","in","the","best","way","I","could.", Math.random()].join(' ');
+	}
+	
+	function concat() {
+		out = "I"+ " " +"never"+ " " +"for"+ " " +"a"+ " " +"day"+ 
+		" " +"gave"+ " " +"up"+ " " +"listening"+ " " +"to"+ " " +
+		"the"+ " " +"songs"+ " " +"of"+ " " +"our"+ " " +"birds" +
+		" "+ " " +"or"+ " " +"watching"+ " " +"their"+ " " +"peculiar"+ 
+		" " +"habits"+ " " +"or"+ " " +"delineating"+ " " +
+		"them"+ " " +"in"+ " " +"the"+ " " +"best"+ " " +"way"+ 
+		" " +"I"+ " " +"could." + " " +Math.random();
+	}
+	
+	document.getElementById('run').addEventListener('click', function(e) {
+		log('running tests');
+		setTimeout(function(){
+			runTest(control, 'control');
+		
+			setTimeout(function() {
+				runTest(arrJoin, 'array join');
+
+		
+				setTimeout(function() {
+					runTest(concat, 'concat');
+				}, 10);
+			}, 10);
+		}, 10);
+		
+	});
+	
+
+
+</script>
+</html>

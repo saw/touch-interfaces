@@ -1,0 +1,47 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 9, ../sass/screen.scss */
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* line 15, ../sass/screen.scss */
+.slide {
+  width: 300px;
+  padding: 20px;
+  margin: 10px auto 10px auto;
+  height: 250px;
+  background: #f6f6ed;
+  position: relative;
+  text-align: center;
+}
+/* line 25, ../sass/screen.scss */
+.slide p {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-family: sans-serif;
+}
+/* line 33, ../sass/screen.scss */
+.slide .img {
+  max-width: 100%;
+  max-height: 210px;
+  text-align: center;
+  opacity: 1;
+  display: inline;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  -o-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
+}
+
+/* line 47, ../sass/screen.scss */
+.imgholder {
+  width: 100%;
+  text-align: center;
+}

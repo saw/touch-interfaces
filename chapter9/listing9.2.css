@@ -1,0 +1,56 @@
+body {
+    font-family: sans-serif;
+    background: #ccc;
+}
+
+/* gradients */
+.switchwrap{
+    /* cross browser versions omitted for clarity */
+    background: linear-gradient(to bottom, #cccccc 0%,#eeeeee 100%); 
+}
+
+.switchwrap .switch {
+    /* cross browser versions omitted for clarity */
+    background: linear-gradient(to bottom, #b8e1fc 0%,#a9d2f3 10%,#90bae4 25%,#90bcea 37%,#90bff0 50%,#6ba8e5 51%,#a2daf5 83%,#bdf3fd 100%);
+}
+
+form {
+    text-align: center;
+    width: 150px;
+    position: relative;
+    margin:auto;
+    font-size:18px;
+}
+
+input {
+    font-size: 18px;
+}
+
+/* the js class makes sure these only work if JavaScript is enabled */
+.js .switchwrap {
+    position: relative;
+    width: 150px;
+    height:30px;
+    margin:auto;
+    box-shadow: inset 1px 1px 3px #000, inset -1px -1px 3px rgba(0,0,0,0.3);
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.js .switchwrap .switch {
+    position: absolute;
+    top:0;
+    left:0;
+    font-size: 12px;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #333;
+    border-radius: 25px;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.5), inset 1px 1px 1px rgba(255,255,255,0.6);
+}
+
+.js .switchwrap #power{
+    position: absolute;
+    top:0;
+    left:-1000px;
+}

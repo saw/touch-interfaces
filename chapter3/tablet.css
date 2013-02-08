@@ -1,0 +1,27 @@
+@media only screen and (max-width: 800px) {
+	
+	.container {
+		padding: 0 10px;
+	}
+	
+	.nav-li {
+		width: auto; /* so all the text fits */
+	}
+	
+	.sidebar {
+		position:relative; /* back in the flow */
+		top: 0;
+		width: auto;
+		padding: 0;
+		text-align: center;
+	}
+	
+	.header h1 {
+		text-align: center;
+	}
+	
+	.main {
+		margin: 0;
+	}	
+}
+

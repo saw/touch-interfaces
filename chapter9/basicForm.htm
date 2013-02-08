@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width">
+	<title>Simple Switch</title>
+	<link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body>
+	<script type="text/javascript">document.body.className = "js";</script>
+	<h1>A Simple Switch</h1>
+	<h2>Power: <span id="status">OFF</span></h2>
+	<form action="/power">
+		<label for="power">Power:</label>
+		<div class="switchwrap">
+			<div class="switch">
+			</div>
+			<input type="checkbox" id="power" />
+		</div>
+		<p><input type="submit" class="submit" value="Submit" /></p>
+	</form>
+</body>
+<script type="text/javascript">
+	(function() {
+		var isOn = false;
+		
+		var $ = function(selector) {
+			return document.querySelector(selector);
+		}
+		
+		function turnOn() {
+			$('#status').innerHTML = 'ON';
+			isOn = true;
+		}
+		
+		function turnOff() {
+			$('#status').innerHTML = 'OFF';
+			isOn = false;
+		}
+		
+		var theSwitch = $('.switch');
+		
+		theSwitch.addEventListener('click', function(e) {
+			if(isOn) {
+				theSwitch.style.left = '0px';
+				turnOff();
+			} else {
+				theSwitch.style.left = '119px';
+				turnOn();
+			}
+		});
+		
+	}());
+</script>
+</html>

@@ -1,0 +1,114 @@
+Black-bellied Whistling-Duck, Dendrocygna autumnalis 
+Fulvous Whistling-Duck, Dendrocygna bicolor
+Greater White-fronted Goose, Anser albifrons
+Taiga Bean Goose, Anser middendorffii
+Emperor Goose, Chen canagica
+Snow Goose, Chen caerulescens
+Ross's Goose, Chen rossii
+Cackling Goose, Branta hutchinsii
+Canada Goose, Branta canadensis
+White-tailed Ptarmigan, Lagopus leucurus
+Sooty Grouse, Dendragapus fuliginosus
+Sharp-tailed Grouse, Tympanuchus phasianellus
+Wild Turkey, Meleagris gallopavo
+Common Loon, Gavia immer
+Yellow-billed Loon, Gavia adamsii
+Manx Shearwater, Puffinus puffinus
+Little Shearwater, Puffinus assimilis
+Wilson's Storm-Petrel, Oceanites oceanicus
+Pelagic Cormorant, Phalacrocorax pelagicus
+Great Egret, Ardea alba
+American White Ibis, Eudocimus albus
+California Condor, Gymnogyps californianus
+Turkey Vulture, Cathartes aura
+Osprey, Pandion haliaetus
+Red-tailed Hawk, Buteo jamaicensis
+Golden Eagle, Aquila chrysaetos
+Peregrine Falcon, Falco peregrinus
+American Coot, Fulica americana
+Sandhill Crane, Grus canadensis
+Black-bellied Plover, Pluvialis squatarola
+Snowy Plover, Charadrius nivosus
+Wilson's Plover, Charadrius wilsonia
+Semipalmated Plover, Charadrius semipalmatus
+Piping Plover, Charadrius melodus
+Killdeer, Charadrius vociferus
+Mountain Plover, Charadrius montanus
+American Avocet, Recurvirostra americana
+Willet, Tringa semipalmata
+Laughing Gull, Leucophaeus atricilla
+Western Gull, Larus occidentalis
+Glaucous-winged Gull, Larus glaucescens
+Common Murre, Uria aalge
+Rock Dove, Columba livia
+Greater Roadrunner, Geococcyx californianus
+Burrowing Owl, Athene cunicularia
+Spotted Owl, Strix occidentalis
+Barred Owl, Strix varia
+Great Gray Owl, Strix nebulosa
+Common Nighthawk, Chordeiles minor
+Common Poorwill, Phalaenoptilus nuttallii
+Green Violet-ear, Colibri thalassinus
+Broad-billed Hummingbird, Cynanthus latirostris
+Blue-throated Hummingbird, Lampornis clemenciae
+Magnificent Hummingbird, Eugenes fulgens
+Ruby-throated Hummingbird, Archilochus colubris
+Black-chinned Hummingbird, Archilochus alexandri
+Anna's Hummingbird, Calypte anna
+Costa's Hummingbird, Calypte costae
+Calliope Hummingbird, Selasphorus calliope
+Broad-tailed Hummingbird, Selasphorus platycercus
+Rufous Hummingbird, Selasphorus rufus
+Allen's Hummingbird, Selasphorus sasin
+Yellow-bellied Sapsucker, Sphyrapicus varius
+Red-naped Sapsucker, Sphyrapicus nuchalis
+Red-breasted Sapsucker, Sphyrapicus ruber
+Ladder-backed Woodpecker, Picoides scalaris
+Gray Jay, Perisoreus canadensis
+Steller's Jay, Cyanocitta stelleri
+Blue Jay, Cyanocitta cristata
+Purple Martin, Progne subis
+Tree Swallow, Tachycineta bicolor
+Violet-green Swallow, Tachycineta thalassina
+Northern Rough-winged Swallow, Stelgidopteryx serripennis
+Bank Swallow, Riparia riparia
+Cliff Swallow, Petrochelidon pyrrhonota
+Oak Titmouse, Baeolophus inornatus
+Juniper Titmouse, Baeolophus ridgwayi
+Cactus Wren, Campylorhynchus brunneicapillus
+Rock Wren, Salpinctes obsoletus
+Canyon Wren, Catherpes mexicanus
+Townsend's Solitaire, Myadestes townsendi
+Veery, Catharus fuscescens
+Gray-cheeked Thrush, Catharus minimus
+Swainson's Thrush, Catharus ustulatus
+Hermit Thrush, Catharus guttatus
+Wood Thrush, Hylocichla mustelina
+Eyebrowed Thrush, Turdus obscurus
+Rufous-backed Robin, Turdus rufopalliatu
+Bohemian Waxwing, Bombycilla garrulus
+Cedar Waxwing, Bombycilla cedrorum
+Nashville Warbler, Oreothlypis ruficapilla
+Virginia's Warbler, Oreothlypis virginiae
+Lucy's Warbler, Oreothlypis luciae
+Northern Parula, Setophaga americana
+Yellow Warbler, Setophaga petechia
+Chestnut-sided Warbler, Setophaga pensylvanica
+Magnolia Warbler, Setophaga magnolia
+Cape May Warbler, Setophaga tigrina
+California Towhee, Melozone crissalis
+Abert's Towhee, Melozone aberti
+Cassin's Sparrow, Peucaea cassinii
+Rufous-crowned Sparrow, Aimophila ruficeps
+Bobolink, Dolichonyx oryzivorus
+Red-winged Blackbird, Agelaius phoeniceus
+Tricolored Blackbird, Agelaius tricolor
+Western Meadowlark, Sturnella neglecta
+Brambling, Fringilla montifringilla
+Gray-crowned Rosy-Finch, Leucosticte tephrocotis
+Black Rosy-Finch, Leucosticte atrata
+Pine Grosbeak, Pinicola enucleator
+Purple Finch, Haemorhous purpureus
+Cassin's Finch, Haemorhous cassinii
+House Finch, Haemorhous mexicanus
+Red Crossbill, Loxia curvirostra

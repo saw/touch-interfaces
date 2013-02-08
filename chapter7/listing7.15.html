@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width">
+	<title>2d vs 3d Transforms</title>
+	<style type="text/css">
+	h1 {
+		width: 100px;
+		border: 1px solid black;
+		margin: 50px 0px 100px 100px;
+		text-align: center;
+		font-size: 32px;
+		-webkit-transform: scale(3);
+		transform: scale(3);
+	}
+	
+	.blurry {
+		-webkit-transform: scale3d(3,3,0);
+		transform: scale3d(3,3,0);
+	}
+	 
+	</style>
+</head>
+<body>
+	<h1>Hello</h1>
+	<h1 class="blurry">Hello</h1>
+</div>
+</body>
+</html>

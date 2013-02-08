@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#ball {
+  background: red;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  border-radius: 50px;
+  background-image: -webkit-gradient(radial, 30px 30px, 0, 30px 30px, 100, color-stop(1%, #ffe0dd), color-stop(5%, #ff3019), color-stop(54%, #d60404), color-stop(100%, #4f0101));
+  background-image: -webkit-radial-gradient(30px 30px, ellipse cover, #ffe0dd 1%, #ff3019 5%, #d60404 54%, #4f0101 100%);
+  background-image: -moz-radial-gradient(30px 30px, ellipse cover, #ffe0dd 1%, #ff3019 5%, #d60404 54%, #4f0101 100%);
+  background-image: -o-radial-gradient(30px 30px, ellipse cover, #ffe0dd 1%, #ff3019 5%, #d60404 54%, #4f0101 100%);
+  background-image: radial-gradient(30px 30px, ellipse cover, #ffe0dd 1%, #ff3019 5%, #d60404 54%, #4f0101 100%);
+}
+
+#floor {
+  position: absolute;
+  bottom: 10px;
+  left: 0px;
+  width: 350px;
+  height: 1px;
+  border-top: 5px solid brown;
+}

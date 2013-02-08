@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#ball {
+  background: red;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  border-radius: 50px;
+  background-image: -webkit-gradient(radial, 30px 30px, 0, 30px 30px, 100, color-stop(1%, #ffe0dd), color-stop(5%, #ff3019), color-stop(54%, #d60404), color-stop(100%, #4f0101));
+  background-image: -webkit-radial-gradient(30px 30px, ellipse cover, #ffe0dd 1%, #ff3019 5%, #d60404 54%, #4f0101 100%);
+  background-image: -moz-radial-gradient(30px 30px, ellipse cover, #ffe0dd 1%, #ff3019 5%, #d60404 54%, #4f0101 100%);
+  background-image: -o-radial-gradient(30px 30px, ellipse cover, #ffe0dd 1%, #ff3019 5%, #d60404 54%, #4f0101 100%);
+  background-image: radial-gradient(30px 30px, ellipse cover, #ffe0dd 1%, #ff3019 5%, #d60404 54%, #4f0101 100%);
+}
+
+#floor {
+  position: absolute;
+  bottom: 10px;
+  left: 0px;
+  width: 350px;
+  height: 1px;
+  border-top: 5px solid brown;
+}
+
+/* WebKit */
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translate3d(0, 20px, 0);
+    -webkit-animation-timing-function: cubic-bezier(1, 0, 0.96, 0.91);
+  }
+
+  50% {
+    -webkit-transform: translate3d(0, 300px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0, 0.27, 0.32, 1);
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 20px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0, 0.27, 0.32, 1);
+  }
+}
+
+/* Firefox < 16*/
+@-moz-keyframes bounce {
+  0% {
+    -moz-transform: translate3d(0, 20px, 0);
+    -moz-animation-timing-function: cubic-bezier(1, 0, 0.96, 0.91);
+  }
+
+  50% {
+    -moz-transform: translate3d(0, 300px, 0);
+    -moz-animation-timing-function: cubic-bezier(0, 0.27, 0.32, 1);
+  }
+
+  100% {
+    -moz-transform: translate3d(0, 20px, 0);
+    -moz-animation-timing-function: cubic-bezier(0, 0.27, 0.32, 1);
+  }
+}
+
+/* Opera < 12.1*/
+@-o-keyframes bounce {
+  0% {
+    -o-transform: translate3d(0, 20px, 0);
+    -o-animation-timing-function: cubic-bezier(1, 0, 0.96, 0.91);
+  }
+
+  50% {
+    -o-transform: translate3d(0, 300px, 0);
+    -o-animation-timing-function: cubic-bezier(0, 0.27, 0.32, 1);
+  }
+
+  100% {
+    -o-transform: translate3d(0, 20px, 0);
+    -o-animation-timing-function: cubic-bezier(0, 0.27, 0.32, 1);
+  }
+}
+
+/* W3C / IE10 / Firefox / opera */
+@keyframes bounce {
+  0% {
+    transform: translate3d(0, 20px, 0);
+    animation-timing-function: cubic-bezier(1, 0, 0.96, 0.91);
+  }
+
+  50% {
+    transform: translate3d(0, 300px, 0);
+    animation-timing-function: cubic-bezier(0, 0.27, 0.32, 1);
+  }
+
+  100% {
+    transform: translate3d(0, 20px, 0);
+    animation-timing-function: cubic-bezier(0, 0.27, 0.32, 1);
+  }
+}
+
+#holder {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: url(http://farm9.staticflickr.com/8175/8065409112_2b4b5e16c4_k.jpg);
+}
+
+#floor {
+  top: 400px;
+}
+
+#ball {
+  -webkit-animation: 2s bounce infinite;
+  -moz-animation: 2s bounce infinite;
+  -ms-animation: 2s bounce infinite;
+  -o-animation: 2s bounce infinite;
+  animation-duration: 2s;
+  animation-name: bounce;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}

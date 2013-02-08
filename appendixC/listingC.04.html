@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width">
+	<title>Bird Quiz</title>
+	<link rel="stylesheet" href="styles.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	
+</head>
+<body>
+	<div class="main">
+		<header class="hd">
+			<div class="logo">
+				<h2 class="logotype l1"><a href="index.html">Bird</a></h2>
+				<h2 class="logotype l2"><a href="index.html">Quiz</a></h2>
+			</div>
+			<div class="score">
+				<span class="label">Birds seen:</span>
+				<span class="count" id="total">0</span>
+				<span class="label">Identified:</span>
+				<span class="count" id="score">0</span>
+			</div>
+		</header>
+		<div id="home" style="display: none">
+			<div class="loading spinner"></div>
+		</div>
+		<div id="quiz" style="display: none">
+			<div class="loading spinner"></div>
+		</div>
+	</div>
+</body>
+<script type="x/handlebars" id="t-home" charset="utf-8">
+	<div class="card">
+		<div class="info">
+			<h2>{{headline}}</h2>
+			{{^total}}
+			<p>You don't have any scores saved</p>
+			{{/total}}
+			{{#if total}}
+			<p>Current Score: {{^score}}0{{/score}}{{score}}/{{total}}</p>
+			{{/if}}
+		</div>
+		<div class="cta">
+			<button id="go" class="button">Take the quiz!</button>
+			<button id="reset" class="button">Reset Score!</button>
+		</div>
+	</div>
+</script>
+<script type="x/handlebars" id="t-quiz" charset="utf-8">
+	<div class="card">
+		{{^question}}
+		<div class="info">
+			<p>This is a multiple choice quiz</p>
+			<p>Look at the picture and try and guess what the bird is</p>
+		</div>
+		{{/question}}
+		<div class="cta">
+			{{#question}}
+				{{#image}}
+				<a target="_blank" href="//www.flickr.com/photos/{{owner}}/{{id}}">
+				<img src="{{url_m}}">
+				</a>
+				{{/image}}
+				<ul class="answers{{#if answered}} answered{{/if}}">
+				{{#each wrong}}
+					<li class=
+					"answer{{#if right}} right{{/if}}{{#if wrong}} wrong{{/if}}">
+						<input id="{{id}}" type="radio" 
+								name="bird" value="{{id}}">
+						<label for="{{id}}">
+							{{name}} <span class="la">({{latin}})</span>
+						</label>
+					</li>
+				{{/each}}
+				</ul>
+			{{/question}}
+			{{#if question}}
+				{{#if question.answered}}
+				<button class="button next" class="button">Next</button>
+				{{else}}
+				<button class="hidden button submit" class="button">Submit</button>
+				{{/if}}
+			{{else}}
+				<button class="button next" class="button">Get Started!</button>
+			{{/if}}
+			
+		</div>
+	</div>
+</script>
+<!-- in production these files should be combined and minified -->
+<script src="ajax.js" type="text/javascript" charset="utf-8"></script>
+<script src="handlebars.js" type="text/javascript" charset="utf-8"></script>
+<script src="router.js" type="text/javascript" charset="utf-8"></script>
+<script src="model.js" type="text/javascript" charset="utf-8"></script>
+<script src="view.js" type="text/javascript" charset="utf-8"></script>
+<script src="bird_data.js" type="text/javascript" charset="utf-8"></script>
+<script src="app.js" type="text/javascript" charset="utf-8"></script>
+</html>

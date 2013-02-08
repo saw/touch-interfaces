@@ -1,0 +1,15 @@
+CACHE MANIFEST
+
+# Timestamp:
+# 2013-03-15r1
+
+CACHE:
+jquery-1.8.0.min.js
+gull-360x112.jpg
+gull-640x360.jpg
+gull-720x225.jpg
+
+FALLBACK:
+
+NETWORK:
+*

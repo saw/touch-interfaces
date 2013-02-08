@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0,user-scaleable=no">
+	<title>Touch Interface Demo</title>
+	<link rel="stylesheet" href="reset.css" type="text/css" media="screen" charset="utf-8">
+	<link rel="stylesheet" href="slides.css" type="text/css" media="screen" harset="utf-8">
+</head>
+<body>
+	<div class="main">
+		<div class="welcome">
+			<h1>Hummingbirds!</h1>
+			<p>Photos of species common to California</p>
+		</div>
+		<div class="carousel">
+			<ul>
+				<li>
+					<a class="slidelink" href="http://www.flickr.com/photos/sarahvain/7769653780">
+						<img data-owner="sarahstierch" data-flickr-url="http://www.flickr.com/photos/sarahvain/7769653780" alt="Juvenile Anna&#x27;s Hummingbird" data-full-height="640" data-full-width="493" src="http://farm9.staticflickr.com/8443/7769653780_3bb5545f73_q.jpg" height="75" width="75">
+					</a>
+				</li>
+				<li>
+					<a class="slidelink" href="http://www.flickr.com/photos/debbra5/7515077178">
+						<img data-owner="Debbiedoright" data-flickr-url="http://www.flickr.com/photos/debbra5/7515077178" alt="img_2284" data-full-height="480" data-full-width="640" src="http://farm8.staticflickr.com/7251/7515077178_b67b96ce1c_q.jpg" height="75" width="75">
+					</a>
+				</li>
+				<li>
+					<a class="slidelink" href="http://www.flickr.com/photos/mleongkee/3398030309">
+						<img data-owner="mauricholas/ Maureen Leong-Kee" data-flickr-url="http://www.flickr.com/photos/mleongkee/3398030309" alt="Calliope Hummingbird - Male" data-full-height="427" data-full-width="640" src="http://farm4.staticflickr.com/3469/3398030309_af720fb1be_q.jpg" height="75" width="75">
+					</a>
+				</li>
+				<li>
+					<a class="slidelink" href="http://www.flickr.com/photos/santapati/8146791510">
+						<img data-owner="dirtinmypocket" data-flickr-url="http://www.flickr.com/photos/santapati/8146791510" alt="balancing act" data-full-height="429" data-full-width="640" src="http://farm9.staticflickr.com/8475/8146791510_26bf75b809_q.jpg" height="75" width="75">
+					</a>
+				</li>
+				<li>
+					<a class="slidelink" href="http://www.flickr.com/photos/90994070@N00/4700774401/">
+						<img data-owner="AnnCam" data-flickr-url="http://www.flickr.com/photos/90994070@N00/4700774401/" alt="Black-Chinned Hummingbird" data-full-height="495" data-full-width="640" src="http://farm5.staticflickr.com/4069/4700774401_f166536687_q.jpg" height="75" width="75">
+					</a>
+				</li>
+				<li>
+					<a class="slidelink" href="http://www.flickr.com/photos/gary_leavens/7619565406">
+						<img data-owner="gary.leavens" data-flickr-url="http://www.flickr.com/photos/gary_leavens/7619565406" alt="IMG_4199" data-full-height="479" data-full-width="640" src="http://farm9.staticflickr.com/8159/7619565406_220a8bb3bc_q.jpg" height="75" width="75">
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+<script src="slides.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+var lightbox = new saw.Lightbox('.carousel');
+document.body.addEventListener('click', function(e){
+	var targ;
+	if(e.target.tagName == 'IMG') {
+		e.preventDefault();
+		targ = e.target.parentNode;
+		lightbox.show(targ.getAttribute('href'));
+	}
+	
+});
+</script>
+</html>

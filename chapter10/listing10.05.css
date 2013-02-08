@@ -1,0 +1,24 @@
+@media screen and (orientation: landscape) {
+  .header {
+    width: 33%;
+    height: 110px;
+    border-bottom: 2px solid black;
+  }
+  .header .hero {
+    background: transparent;
+  }
+  .header .title {
+    height: 34px;
+    font-size: 14px;
+  }
+  .header .arrow span {
+    top: 10px;
+  }
+
+  .bd {
+    width: auto;
+    margin: 0 10px 0 34%;
+    padding: 0px;
+    font-size: 12px;
+  }
+}
